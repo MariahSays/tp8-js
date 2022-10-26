@@ -1,1 +1,15 @@
 /*CSS for memeory card game*/
+
+body {
+  background-color: #C6CAED;
+}
+
+#table {
+  background-color: #FBE0B1;
+  width: 80vw;
+  height: 80vh;
+  positon: relative;
+  margin: 10vh auto;
+ /* border: thin solid #190B28; */
+  box-shadow: 10px 7px #190B28;
+}
