@@ -17,6 +17,7 @@ body {
   box-shadow: 10px 7px #190B28;
 }
 .card{
+  position: relative;
   background-color: grey; 
   width:15vw;
   height:20vw;
@@ -26,10 +27,38 @@ body {
   margin: 1vw;
 }
 
+.card div{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 .cardFront{
-  
+  background-color: red;
+  display:none;
 }
 
 .cardBack {
-  
+  background-color: blue;
+  display:none;
+}
+
+.image1{
+  background-image: url(images/card1.jpg) ;
+  background-size: cover;
+}
+.image2{
+  background-image: url(images/card2.jpg) ;
+  background-size: cover;
+}
+.image3{
+  background-image: url(images/card3.jpg) ;
+  background-size: cover;
+}
+.image4{
+  background-image: url(images/card4.jpg) ;
+  background-size: cover;
+}
+.image5{
+  background-image: url(images/card5.jpg) ;
+  background-size: cover;
 }
