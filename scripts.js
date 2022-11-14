@@ -8,6 +8,15 @@ window.onload = function(){
   
   cardsClicked = 0; // card tracker
   
+  function checkWin(){
+    cardsRemovedList = document.getElementsByClassName("remove"); // finds all cards with removed
+    cardsRemoved = cardsRemovedList.length; //counts cards that have been removed
+    console.log(cardsRemoved);
+    if (cardsRemoved == 6){
+      document.querySelector("#gameMessage #gameEnd h1").innerHTML = "You Win! Congrats";
+    }
+  } //checks to see if game has ended
+  
   function removeMatch(card1, card2){
    Pause = setTimeout(function(){                    
     card1.classList.add("remove");

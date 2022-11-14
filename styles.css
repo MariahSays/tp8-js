@@ -8,6 +8,10 @@ body {
 }
 /*Table/ game contents starts here*/
 
+#gameMessage{
+ text-align: center;
+}
+
 #table {
   background-color: #FBE0B1;
   width: 85vw;
