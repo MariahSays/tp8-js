@@ -8,46 +8,66 @@ window.onload = function(){
   
   cardsClicked = 0; // card tracker
   
+  function removeMatch(card1, card2){
+    card1.classList.add("remove");
+    card2.classList.add("remove");
+    card1.classList.remove("clicked");
+    card2.classList.remove("clicked");
+    cardsClicked = 0;
+  } // removes cards that match
+  
+  function flipCards(card1, card2){
+    card1.classList.remove("clicked");
+    card2.classList.remove("clicked");
+    cardsClicked = 0;
+    cardsClicked = 0;
+  } // flips cards that donn't match
+  
   function cardClicked(what) {
-    //toggles front and back of card 
-    if(what.classList.contains("clicked")){
+      if(what.classList.contains("remove")){
+       }
+      if(what.classList.contains("clicked")){
         what.classList.remove("clicked");
         cardsClicked--;
-       }
-    else{
-      what.classList.add("clicked");
-      cardsClicked++;
-       if (cardsClicked === 2){ 
+        }
+      else{
+        what.classList.add("clicked");
+        cardsClicked++;
+        if (cardsClicked === 2){ 
           cardCheck();
-       }
-    }
-  }
-  
- function cardCheck(cardsClicked){
-   //function to check if cards match
+        }
+      }
+    } //toggles front and back of card 
+
+  function cardCheck(cardsClicked){
+ 
    clickedCards = document.getElementsByClassName("clicked");
    
    matched = false;
-   if (clickedCards[0].classList == clickedCards[1].classList){
+   if (clickedCards[0].classList.contains("image1") && clickedCards[1].classList.contains("image1") || 
+       clickedCards[0].classList.contains("image2") && clickedCards[1].classList.contains("image2") || 
+       clickedCards[0].classList.contains("image3") && clickedCards[1].classList.contains("image3") || 
+       clickedCards[0].classList.contains("image4") && clickedCards[1].classList.contains("image4") || 
+       clickedCards[0].classList.contains("image5") && clickedCards[1].classList.contains("image5")){
      //compares classes of first and second clicked cards
      matched = true;
    }
    else {
-     matched =false;
+     matched = false;
    }
    if (matched){
-     
-     removeMatch();
+     removeMatch(clickedCards[0],clickedCards[1]);
    }
    else{
-     flipCards()
+     flipCards(clickedCards[0],clickedCards[1]);
    }
-}
+}  //function to check if cards match
   
   for (c = 0; c < cardCount; c++) {
-    //flips cards for number of cards 
+   
     cardList[c].onclick = function(){
       cardClicked(this);
     }  
-  }
+  }  //flips cards for number of cards 
+  
 }

@@ -19,7 +19,6 @@ body {
 }
 .card{
   position: relative;
-  background-color: grey; 
   width:15vw;
   height:20vw;
   float: left;
@@ -39,7 +38,8 @@ body {
 }
 
 .cardBack {
-  display:none;
+  background-image: url(images/back.jpg);
+  background-size: cover;
 }
 
 .image1 .cardFront{
@@ -71,6 +71,14 @@ body {
   display: block;
 }
 
+.card.remove div{
+  display: none;
+}
+
+.card.remove{
+  box-shadow: none;
+  border: none;
+}
 /*Pop Up Messages start here
 
 #gameMessage{
