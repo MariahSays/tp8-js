@@ -9,18 +9,19 @@ window.onload = function(){
   cardsClicked = 0; // card tracker
   
   function removeMatch(card1, card2){
+   Pause = setTimeout(function(){                    
     card1.classList.add("remove");
     card2.classList.add("remove");
     card1.classList.remove("clicked");
     card2.classList.remove("clicked");
-    cardsClicked = 0;
+    cardsClicked = 0;}, 1000);
   } // removes cards that match
   
   function flipCards(card1, card2){
+    pause = setTimeout(function(){
     card1.classList.remove("clicked");
     card2.classList.remove("clicked");
-    cardsClicked = 0;
-    cardsClicked = 0;
+    cardsClicked = 0;},1000);
   } // flips cards that donn't match
   
   function cardClicked(what) {
